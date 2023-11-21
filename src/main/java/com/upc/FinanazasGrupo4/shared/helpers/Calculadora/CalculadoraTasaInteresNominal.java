@@ -16,13 +16,6 @@ public class CalculadoraTasaInteresNominal {
         double n= (double) frecuenciaPagoEnDias /capitalizacionEnDias;
 
         double TEM= Math.pow(1+(tasaNominalDecimal/m),n)-1;
-
-        //Por consiguiente la TE recibida es del mismo plazo que la TN //YA NO ES NECESARIO
-        //Por ultimo, paso la TE a TE de acuerdo a la frecuencia de pago que se elije //TAMPOCO , CON FORMULA SALE TODO
-
-        //formula: TEP = (1 + (i_nominal/m))^n - 1
-        //m =  dias del plazo de la tasa nominal/capitalizacion
-        //n = dias a trasladar tasa efectiva(como es mensual, entonces sería 30) / capitalizacion
         return Utilidades.porcentajeDecimalEnFormaPorcentaje(TEM);
     }
 
@@ -38,12 +31,6 @@ public class CalculadoraTasaInteresNominal {
 
         double TEM= Math.pow(1+(tasaNominalDecimal/m),n)-1;
 
-        //Por consiguiente la TE recibida es del mismo plazo que la TN //YA NO ES NECESARIO
-        //Por ultimo, paso la TE a mensual //TAMPOCO , CON FORMULA SALE TODO
-
-        //formula: TEP = (1 + (i_nominal/m))^n - 1
-        //m =  dias del plazo de la tasa nominal/capitalizacion
-        //n = dias a trasladar tasa efectiva(como es mensual, entonces sería 30) / capitalizacion
         return Utilidades.porcentajeDecimalEnFormaPorcentaje(TEM);
     }
 

@@ -71,18 +71,5 @@ public class CalculadoraSeguroDesgravamen{
 
     }
 
-    //frecuencia de pago : Bimestral-> 2 meses
-    //porcentaje seguro desgravamen: 2.3
-    //tiempo plazo seguro desgravamen: ANUAL-> 12 meses
-    //para hallar el porcentaje que tendrá el seguro de desgravamen en el plazo de la frecuencia de pago se hace lo siguiente:
-    // 2.3/12 = 0.19166666666666668
-    // 0.19166666666666668 * 2 = 0.38333333333333336
 
-    //otro caso
-    //freuencia de pago: SEMANAL-> 1 semana
-    //porcentaje seguro desgravamen: 2.3
-    //tiempo plazo seguro desgravamen: ANUAL-> 12 meses
-    //para hallar el porcentaje que tendrá el seguro de desgravamen en el plazo de la frecuencia de pago se hace lo siguiente:
-    // 2.3/12 = 0.19166666666666668 (porcentaje mensual)
-    // 0.19166666666666668 /4 =  (porcentaje semanal)
 }

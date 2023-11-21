@@ -1,5 +1,6 @@
 package com.upc.FinanazasGrupo4.service.impl;
 
+import com.upc.FinanazasGrupo4.domain.model.Cronograma;
 import com.upc.FinanazasGrupo4.resource.dto.CustomerResource;
 import com.upc.FinanazasGrupo4.shared.exception.ValidationException;
 import com.upc.FinanazasGrupo4.domain.model.Customer;
@@ -106,6 +107,10 @@ public class CustomerServiceImpl implements CustomerService {
             throw new ValidationException("El email "+ customerResource.getEmail()+" ya existe");
         }
 
+    }
+
+    public Optional<Cronograma> getCronogramaByCustomerAndCronogramaIds(Long customerId, Long cronogramaId) {
+        return customerRepository.findCronogramaByCustomerAndCronogramaIds(customerId, cronogramaId);
     }
 
 }

@@ -22,10 +22,14 @@ public class cuotacontroller {
     public ResponseEntity<List<Cronograma>> getAllCronogramasByCustomerId(@PathVariable Long customerId){
         return new ResponseEntity<>(cronogramaService.getAllCronogramasByCustomerId(customerId), org.springframework.http.HttpStatus.OK);
     }
+
+
     @PostMapping("/{customerId}/hallarcuota")
     public ResponseEntity<Cronograma> calcularCronograma(@PathVariable Long customerId, @RequestBody CreateEntryDataCronograma createEntryDataCronograma){
         return new ResponseEntity<>(cronogramaService.saveCronograma(customerId, createEntryDataCronograma),org.springframework.http.HttpStatus.OK);
     }
+
+
 
 
 }

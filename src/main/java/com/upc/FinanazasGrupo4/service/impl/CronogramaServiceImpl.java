@@ -84,6 +84,7 @@ public class CronogramaServiceImpl implements CronogramaService {
         return cronogramaRepository.findAllByCustomerId(customerId);
     }
 
+
     private String determinarAbreviaturaTasaInteres(CreateEntryDataCronograma createEntryDataCronograma){
 
         //obtengo los datos del tipo de tasa y su plazo

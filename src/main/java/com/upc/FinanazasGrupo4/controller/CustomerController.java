@@ -1,5 +1,6 @@
 package com.upc.FinanazasGrupo4.controller;
 
+import com.upc.FinanazasGrupo4.domain.model.Cronograma;
 import com.upc.FinanazasGrupo4.resource.dto.CustomerResource;
 import com.upc.FinanazasGrupo4.domain.model.Customer;
 import com.upc.FinanazasGrupo4.domain.service.inter.CustomerService;
@@ -36,6 +37,12 @@ public class CustomerController {
         return new ResponseEntity<>(customerService.getById(customerId), HttpStatus.OK).getBody();
     }
 
+    @GetMapping("/id/{customerId}/cronograma/{cronogramaId}")
+    public ResponseEntity<Optional<Cronograma>> getCronogramaByCustomerAndCronogramaIds(@PathVariable Long customerId,
+                                                                                        @PathVariable Long cronogramaId) {
+        return new ResponseEntity<>(customerService.getCronogramaByCustomerAndCronogramaIds(customerId, cronogramaId), HttpStatus.OK);
+    }
+
     @PostMapping()
     public ResponseEntity<Customer> createCustomer(@RequestBody CustomerResource customerResource){
         return new ResponseEntity<>(customerService.createCustomer(customerResource), org.springframework.http.HttpStatus.CREATED);
@@ -51,6 +58,7 @@ public class CustomerController {
         customerService.deleteCustomer(id);
         return new ResponseEntity<>(org.springframework.http.HttpStatus.NO_CONTENT);
     }
+
 
 
 }

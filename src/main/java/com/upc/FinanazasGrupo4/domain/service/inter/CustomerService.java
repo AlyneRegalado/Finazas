@@ -1,5 +1,6 @@
 package com.upc.FinanazasGrupo4.domain.service.inter;
 
+import com.upc.FinanazasGrupo4.domain.model.Cronograma;
 import com.upc.FinanazasGrupo4.resource.dto.CustomerResource;
 import com.upc.FinanazasGrupo4.domain.model.Customer;
 
@@ -17,4 +18,5 @@ public interface CustomerService {
     Customer getCustomerByEmailAndPassword(String email, String password);
 
     void deleteCustomer(Long id);
+    Optional<Cronograma> getCronogramaByCustomerAndCronogramaIds(Long customerId, Long cronogramaId);
 }
