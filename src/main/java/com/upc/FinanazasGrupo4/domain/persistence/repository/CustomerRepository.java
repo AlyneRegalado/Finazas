@@ -14,6 +14,6 @@ public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
     Customer getCustomerByEmailAndPassword(String email,String password);
     @Query("SELECT cr FROM Customer c JOIN c.cronograma cr WHERE c.id = :customerId AND cr.id = :cronogramaId")
-    Optional<Cronograma> findCronogramaByCustomerAndCronogramaIds(@Param("customerId") Long customerId, @Param("cronogramaId") Long cronogramaId);
+    Optional<Cronograma> findCronogramaByCustomerAndCronogramaIds(Long customerId,Long cronogramaId);
 
 }
